@@ -1,0 +1,9 @@
+name: Rubygoal 
+pygments: true
+
+exclude: ["README.md", "Gemfile", "Gemfile.lock", "Procfile", "config.ru"]
+
+assets:
+  compress:
+    css: 'sass'
+    js: 'uglifier'
