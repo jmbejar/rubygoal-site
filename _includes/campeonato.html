@@ -1,0 +1,114 @@
+<p>
+  Para participar en el campeonato de fútbol RubyGoal hay que implementar una
+  clase que herede de <code>Coach</code> e implemente los métodos
+  <code>name</code> y <code>formation</code>.
+  <br>
+
+  {% highlight ruby %}
+  module Rubygoal
+    class MyCoach < Coach
+      def name
+        "My team"
+      end
+
+      def formation(match)
+        formation = Formation.new
+        formation.defenders   = [:average, :average, :none,    :average, :average]
+        formation.midfielders = [:average, :none,    :fast,    :none,    :average]
+        formation.attackers   = [:none,    :fast,    :captain, :fast,    :none   ]
+
+        formation
+      end
+    end
+  end
+  {% endhighlight %}
+
+  El jugador cuenta con la siguiente información del partido para ir adaptando
+  su táctica a lo largo del partido. Esta información es accesible desde el
+  parámetro <code>match</code> que recibe el método <code>formation</code>.
+</p>
+<p>
+  <code>Match#time</code>
+  <br>
+  indica cuanto tiempo (segundos) le queda al partido.
+  <br>
+  Devuelve un número entre 120 y 0 (120 cuando comienza el partido)
+
+  {% highlight ruby %}
+  if match.time < 10
+    formation.defenders = [:none, :none, :none, :none, :none]
+  end
+  {% endhighlight %}
+</p>
+
+<p>
+  <code>Match#me</code>
+  <br>
+  devuelve un objeto con la siguiente información
+
+  <table class="table table-bordered">
+    <tr>
+      <th>draw?</th>
+      <td>Devuelve <code>true</code> si el partido está empatado</td>
+    </tr>
+    <tr>
+      <th>losing?</th>
+      <td>Devuelve <code>true</code> si tu equipo va perdiendo</td>
+    </tr>
+    <tr>
+      <th>winning?</th>
+      <td>Devuelve <code>true</code> si tu equipo va ganando</td>
+    </tr>
+    <tr>
+      <th>score</th>
+      <td>Devuelve la cantidad de goles que ha hecho tu equipo</td>
+    </tr>
+  </table>
+
+  {% highlight ruby %}
+  if formation.me.winning? || formation.me.draw?
+    formation.defenders = [:average, :fast, :captain, :fast, :average]
+  elsif formation.me.losing?
+    formation.attackers = [:average, :fast, :captain, :fast, :average]
+  end
+  {% endhighlight %}
+</p>
+
+<p>
+  <code>Match#other</code>
+  <br>
+  devuelve un objeto con la siguiente información
+
+  <table class="table table-bordered">
+    <tr>
+      <th>formation</th>
+      <td>Devuelve la alineación del equipo rival</td>
+    </tr>
+    <tr>
+      <th>draw?</th>
+      <td>Devuelve <code>true</code> si el partido está empatado</td>
+    </tr>
+    <tr>
+      <th>losing?</th>
+      <td>Devuelve <code>true</code> si el equipo rival va perdiendo</td>
+    </tr>
+    <tr>
+      <th>winning?</th>
+      <td>Devuelve <code>true</code> si el equipo rival va ganando</td>
+    </tr>
+    <tr>
+      <th>score</th>
+      <td>Devuelve la cantidad de goles que ha hecho el equipo rival</td>
+    </tr>
+  </table>
+
+  {% highlight ruby %}
+  rival = formation.other.formation
+
+  if rival.attackers.include?(:captain)
+    formation.defenders = [:average, :fast, :captain, :fast, :average]
+  end
+  {% endhighlight %}
+</p>
+
+Link a repo de github y link a descarga directa de zip

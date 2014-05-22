@@ -59,6 +59,7 @@ DEPENDENCIES
   RedCloth
   jekyll
   jekyll-assets
+  pygments.rb
   sass
   sinatra
   thin

@@ -1,0 +1,37 @@
+<p>
+  El siguiente conjunto de reglas debe ser respetado por los participantes del
+  campeonato.
+
+  <ol>
+    <li>
+      La implementación del método `name` debe devolver el mismo nombre SIEMPRE.
+      <br>
+      No se aceptarán participantes que hagan una implementación de este método que
+  devuelva distintos valores en cada ejecución
+
+    <li>
+      La formación debe siempre contener la cantidad correcta de jugadores
+      <ul>
+        <li>1 del tipo :captain
+        <li>3 del tipo :fast
+        <li>6 del tipo :average
+      </ul>
+      Equipos que en algún flujo de la implementación rompan esta regla, serán descalificados
+    <li>
+      La implementación de los métodos `lineup` y `name` no debe ser costoso en tiempo.
+      <br>
+      Ambos métodos van a ser invocados muchas veces por segundo y deben correr con esa
+  restricción de tiempo (en el orden de centésimas de segundo). Pruebe su implementación con alguna de las tácticas de ejemplo para ver si el juego corre fluidamente y poder anticipar problemas de performance.
+      <br>
+      Queda a criterio del comité organizador descalificar equipos que no cumplan con ese
+  requisito.
+
+    <li>
+    No está permitida la modificación en tiempo de ejecución de ninguna de las clases
+    del juego.
+    <br>
+    También nos reservamos el derecho de descalificar a un participante si
+  sospechamos que saca ventaja de forma injusta sobre cualquier bug que tenga el juego
+  (la actitud correcta es reportar el bug a los organizadores, no explotarlo a su favor)
+  </ol>
+</p>
