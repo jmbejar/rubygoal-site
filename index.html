@@ -39,7 +39,11 @@ title: Rubygoal
       <h2>¿Qué es Rubygoal?</h2>
       <div class="row">
         <div class="col-md-12">
-          {% include rubygoal.html %}
+          <p>
+            RubyGoal es un juego en el cual vos sos el/la DT de un equipo de fútbol. Participarás contra otros programadores implementando en Ruby la estrategia que va a utilizar tu equipo.
+            <br>
+            Se ejecutarán partidos entre aquellos que se presenten y los que lleguen a fases avanzadas tendrán premios como ser remeras de WyeWorks, membresías de CodeSchool, medallas, y un Kindle y una copa para el vencedor.
+          </p>
         </div>
       </div>
 
@@ -50,12 +54,88 @@ title: Rubygoal
         </div>
       </div>
 
-      <h2>Reglamento</h2>
+      <h2>¿Cómo instalarlo?</h2>
       <div class="row">
         <div class="col-md-12">
-        {% include reglamento.html %}
+          {% highlight bash %}
+          $ gem install rubygoal
+          {% endhighlight %}
         </div>
       </div>
+
+      <h2>¿Cómo ejecutarlo?</h2>
+      <div class="row">
+        <div class="col-md-12">
+          Correr el juego con los <code>Coach</code> de ejemplo
+
+          {% highlight bash %}
+          $ rubygoal
+          {% endhighlight %}
+
+          Correr el juego con tu implementación de Coach
+
+          {% highlight bash %}
+          $ rubygoal coach_1.rb
+          {% endhighlight %}
+
+          Correr el juego con tu implementación de ambos Coach
+
+          {% highlight bash %}
+          $ rubygoal coach_1.rb coach_2.rb
+          {% endhighlight %}
+        </div>
+      </div>
+
+      <h2>A tener en cuenta</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <p>
+            El siguiente conjunto de reglas debe ser respetado por los participantes del
+            campeonato.
+
+            <ol>
+              <li>
+                La implementación del método <code>name</code> debe devolver el mismo nombre SIEMPRE.
+                <br>
+                No se aceptarán participantes que hagan una implementación de este método que
+            devuelva distintos valores en cada ejecución
+
+              <li>
+                La formación debe siempre contener la cantidad correcta de jugadores
+                <ul>
+                  <li>1 del tipo :captain
+                  <li>3 del tipo :fast
+                  <li>6 del tipo :average
+                </ul>
+                Equipos que en algún flujo de la implementación rompan esta regla, serán descalificados
+              <li>
+                La implementación de los métodos <code>lineup</code> y <code>name</code> no debe ser costoso en tiempo.
+                <br>
+                Ambos métodos van a ser invocados muchas veces por segundo y deben correr con esa
+            restricción de tiempo (en el orden de centésimas de segundo). Pruebe su implementación con alguna de las tácticas de ejemplo para ver si el juego corre fluidamente y poder anticipar problemas de performance.
+                <br>
+                Queda a criterio del comité organizador descalificar equipos que no cumplan con ese
+            requisito.
+
+              <li>
+              No está permitida la modificación en tiempo de ejecución de ninguna de las clases
+              del juego.
+              <br>
+              También nos reservamos el derecho de descalificar a un participante si
+            sospechamos que saca ventaja de forma injusta sobre cualquier bug que tenga el juego
+            (la actitud correcta es reportar el bug a los organizadores, no explotarlo a su favor)
+            </ol>
+          </p>
+        </div>
+      </div>
+
+      <h2>Más info o dudas?</h2>
+      <div class="row">
+        <div class="col-md-12">
+        Acercate al Booth de WyeWorks y así te explicamos y te damos una mano. También podés twittear al hashtag <a href="https://twitter.com/search?q=%23rubygoal">#rubygoal</a>.
+        </div>
+      </div>
+
     </div>
 
     <div id="footer">
