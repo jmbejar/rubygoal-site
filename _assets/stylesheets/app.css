@@ -45,6 +45,13 @@ pre, code {
   width: 248px;
 }
 
+/* code */
+.highlight code {
+  width: 700px;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Footer */
 #footer {
   background-color: #4d4d4d;

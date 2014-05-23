@@ -4,24 +4,24 @@
   <code>name</code> y <code>formation</code>.
   <br>
 
-  {% highlight ruby %}
-  module Rubygoal
-    class MyCoach < Coach
-      def name
-        "My team"
-      end
+{% highlight ruby %}
+module Rubygoal
+  class MyCoach < Coach
+    def name
+      "My team"
+    end
 
-      def formation(match)
-        formation = Formation.new
-        formation.defenders   = [:average, :average, :none,    :average, :average]
-        formation.midfielders = [:average, :none,    :fast,    :none,    :average]
-        formation.attackers   = [:none,    :fast,    :captain, :fast,    :none   ]
+    def formation(match)
+      formation = Formation.new
+      formation.defenders   = [:average, :average, :none,    :average, :average]
+      formation.midfielders = [:average, :none,    :fast,    :none,    :average]
+      formation.attackers   = [:none,    :fast,    :captain, :fast,    :none   ]
 
-        formation
-      end
+      formation
     end
   end
-  {% endhighlight %}
+end
+{% endhighlight %}
 
   El jugador cuenta con la siguiente información del partido para ir adaptando
   su táctica a lo largo del partido. Esta información es accesible desde el
@@ -34,11 +34,11 @@
   <br>
   Retorna un número entre 120 y 0 (120 cuando comienza el partido)
 
-  {% highlight ruby %}
-  if match.time < 10
-    formation.defenders = [:none, :none, :none, :none, :none]
-  end
-  {% endhighlight %}
+{% highlight ruby %}
+if match.time < 10
+  formation.defenders = [:none, :none, :none, :none, :none]
+end
+{% endhighlight %}
 </p>
 
 <p>
@@ -65,13 +65,13 @@
     </tr>
   </table>
 
-  {% highlight ruby %}
-  if formation.me.winning? || formation.me.draw?
-    formation.defenders = [:average, :fast, :captain, :fast, :average]
-  elsif formation.me.losing?
-    formation.attackers = [:average, :fast, :captain, :fast, :average]
-  end
-  {% endhighlight %}
+{% highlight ruby %}
+if formation.me.winning? || formation.me.draw?
+  formation.defenders = [:average, :fast, :captain, :fast, :average]
+elsif formation.me.losing?
+  formation.attackers = [:average, :fast, :captain, :fast, :average]
+end
+{% endhighlight %}
 </p>
 
 <p>
@@ -102,11 +102,11 @@
     </tr>
   </table>
 
-  {% highlight ruby %}
-  rival = formation.other.formation
+{% highlight ruby %}
+rival = formation.other.formation
 
-  if rival.attackers.include?(:captain)
-    formation.defenders = [:average, :fast, :captain, :fast, :average]
-  end
-  {% endhighlight %}
+if rival.attackers.include?(:captain)
+  formation.defenders = [:average, :fast, :captain, :fast, :average]
+end
+{% endhighlight %}
 </p>
