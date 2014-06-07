@@ -1,0 +1,55 @@
+- nombre: Marcelo Belnicoff
+  equipo: Yellow
+  archivo: /assets/files/teams/yellow/yellow_coach.rb
+
+- nombre: Andreas Fast
+  equipo: El Ombu
+  archivo: /assets/files/teams/el_ombu/ahfast.rb
+
+- nombre: Luis Pablo Gallo
+  equipo: Pied Pipers
+  archivo: /assets/files/teams/pied_pipers/pied_coach.rb
+
+- nombre: Bruno Fagundez
+  equipo: Martians FC
+  archivo: /assets/files/teams/martians_fc/martiancoach.rb
+
+- nombre: Juan Ignacio Laube
+  equipo: Derby County
+  archivo: /assets/files/teams/derby_county/derby.rb
+
+- nombre: Daniel Gomez de Souza
+  equipo: Terezo Osaka
+  archivo: /assets/files/teams/terezo_osaka/terezo_osaka.rb
+
+- nombre: Hernán Sartorio
+  equipo: Murcielagos FC
+  archivo: /assets/files/teams/murcielagos_fc/murcielagos_fc.rb
+
+- nombre: Juan Andres Rodriguez
+  equipo: Carboneros Till Death
+  archivo: /assets/files/teams/carboneros_till_death/carboneros_till_death.rb
+
+- nombre: Wilfredo Manrique
+  equipo: Caracas FC
+  archivo: /assets/files/teams/caracas/wilman.rb
+
+- nombre: Aldo Fernandez
+  equipo: TTE
+  archivo: /assets/files/teams/tte/CoachAldo.rb
+
+- nombre: Sebastián Sierra
+  equipo: Tarmacitos
+  archivo: /assets/files/teams/tarmacitos/sebas_coach.rb
+
+- nombre: Mathias Carignani
+  equipo: Sanduceros
+  archivo: /assets/files/teams/sanduceros/coach_mathias.rb
+
+- nombre: Gianfranco Zas
+  equipo: snmgian
+  archivo: /assets/files/teams/snmgian/snmgian.rb
+
+- nombre: Matías Flores
+  equipo: La banda de ramon
+  archivo: /assets/files/teams/la_banda_de_ramon/la_banda_de_ramon.rb

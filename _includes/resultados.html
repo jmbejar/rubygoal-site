@@ -1,0 +1,23 @@
+<p>
+  Felicitamos al campeón <b>Yellow</b>, <code>Coach</code> implementado por <b>Marcelo Belnicoff</b>
+</p>
+<p>
+  A continuación pueden encontrar algunos de los participantes
+  del torneo y cual fue la implementación de 
+  <code>Coach</code> con la que participaron:
+  
+  <table class="table table-bordered">
+    <tr>
+      <th>Participante</th>
+      <th>Equipo</th>
+      <th>Archivo</th>
+    </tr>
+    {% for item in site.data.participantes %}
+      <tr>
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.equipo }}</td>
+        <td><a target="_blank" href="{{ item.archivo }}">Descargar</a></td>
+      </tr>
+    {% endfor %}
+  </table>
+</p>

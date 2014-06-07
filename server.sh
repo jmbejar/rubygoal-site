@@ -1,1 +1,1 @@
-bundle ex jekyll --server --auto
+bundle ex jekyll serve --watch

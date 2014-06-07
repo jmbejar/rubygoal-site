@@ -5,7 +5,7 @@ source "https://rubygems.org"
 gem "sinatra"
 gem "thin"
 
-gem "jekyll"
+gem "jekyll", "~>1.0"
 gem "jekyll-assets"
 gem "RedCloth"
 gem "pygments.rb"

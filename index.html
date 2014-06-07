@@ -35,8 +35,11 @@ title: Rubygoal
         <div class="col-md-12">
           <p>
             RubyGoal es un juego en el cual vos sos el/la DT de un equipo de fútbol. Participarás contra otros programadores implementando en Ruby la estrategia que va a utilizar tu equipo.
-            <br>
-            Se ejecutarán partidos entre aquellos que se presenten y los que lleguen a fases avanzadas tendrán premios como ser remeras de WyeWorks, membresías de <a href="http://codeschool.com">CodeSchool</a>, medallas, y un Kindle y una copa para el vencedor.
+          </p>
+
+          <p>
+            El código fuente está disponible en <a
+              href="https://github.com/wyeworks/rubygoal">Github</a>.
           </p>
         </div>
       </div>
@@ -73,22 +76,10 @@ $ rubygoal coach_1.rb coach_2.rb
         </div>
       </div>
 
-      <h2>¿Cómo participar?</h2>
+      <h2>¿Cómo implementar la estrategia?</h2>
       <div class="row">
         <div class="col-md-12">
-          Implementá tu estrategia y mandá un email a <a href="mailto:rubygoal@wyeworks.com">rubygoal@wyeworks.com</a> con
-          <ul>
-            <li>Nombre completo</li>
-            <li>Archivo Ruby con la implementación de tu estrategia.</li>
-          </ul>
-          Tenemos un cupo de 32 equipos, así que apurate! El periodo de inscripciones termina el sábado 24/5 a las 11am.
-        </div>
-      </div>
-
-      <h2>Cómo implementar la estrategia?</h2>
-      <div class="row">
-        <div class="col-md-12">
-{% include campeonato.html %}
+          {% include campeonato.html %}
         </div>
       </div>
 
@@ -103,8 +94,8 @@ $ rubygoal coach_1.rb coach_2.rb
       <div class="row">
         <div class="col-md-12">
           <p>
-            El siguiente conjunto de reglas debe ser respetado por los participantes del
-            campeonato.
+            El siguiente conjunto de reglas debe ser respetado por los
+            participantes de campeonatos RubyGoal.
 
             <ol>
               <li>
@@ -142,11 +133,19 @@ $ rubygoal coach_1.rb coach_2.rb
         </div>
       </div>
 
+      <div id="results">
+        <h2>Resultados del campeonato realizado en la <a href="https://twitter.com/search?q=%23rubyconfuy">#RubyConfUy</a></h2>
+        <div class="row">
+          <div class="col-md-12">
+            {% include resultados.html %}
+          </div>
+        </div>
+      </div>
+
       <h2>Más info o dudas?</h2>
       <div class="row">
         <div class="col-md-12">
-        Acercate al Booth de WyeWorks y así te explicamos y te damos una mano. <br/>
-        También podés twittear al hashtag <a href="https://twitter.com/search?q=%23rubygoal">#rubygoal</a>.
+        Podés twittear al hashtag <a href="https://twitter.com/search?q=%23rubygoal">#rubygoal</a>.
         </div>
       </div>
 
