@@ -77,3 +77,11 @@ pre, code {
 div.player-container {
   margin-top: 20px;
 }
+
+.cell-score {
+  width: 30px;
+}
+
+.cell-home {
+  text-align: right;
+}
