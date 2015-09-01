@@ -1,5 +1,5 @@
-name: Rubygoal 
-pygments: true
+name: Rubygoal
+highlighter: pygments
 
 exclude: ["README.md", "Gemfile", "Gemfile.lock", "Procfile", "config.ru", "vendor"]
 
