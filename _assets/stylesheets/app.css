@@ -73,3 +73,7 @@ pre, code {
 #footer .wyeworks span {
   display:none;
 }
+
+div.player-container {
+  margin-top: 20px;
+}
