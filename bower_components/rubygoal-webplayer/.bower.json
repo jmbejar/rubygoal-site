@@ -1,0 +1,30 @@
+{
+  "name": "rubygoal-webplayer",
+  "version": "1.0.5",
+  "description": "Rubygoal Web Player",
+  "license": "MIT",
+  "main": "rubygoal-player.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.9.0",
+    "jquery": "jquery#~2.1.4"
+  },
+  "homepage": "https://github.com/jmbejar/rubygoal-webplayer",
+  "_release": "1.0.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.5",
+    "commit": "f53b6cf66ab36b8dfda8d7159ceaaf4e47bf0844"
+  },
+  "_source": "git://github.com/jmbejar/rubygoal-webplayer.git",
+  "_target": "~1.0.5",
+  "_originalSource": "rubygoal-webplayer",
+  "_direct": true
+}

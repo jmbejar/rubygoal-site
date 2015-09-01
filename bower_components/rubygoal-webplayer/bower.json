@@ -1,0 +1,19 @@
+{
+    "name": "rubygoal-webplayer",
+    "version": "1.0.0",
+    "description": "Rubygoal Web Player",
+    "license": "MIT",
+    "main": "rubygoal-player.html",
+    "keywords": [
+        "polymer",
+        "web-components"
+    ],
+    "ignore": [
+        "**/.*",
+        "bower_components"
+    ],
+    "dependencies": {
+        "polymer": "Polymer/polymer#^0.9.0",
+        "jquery": "jquery#~2.1.4"
+    }
+}

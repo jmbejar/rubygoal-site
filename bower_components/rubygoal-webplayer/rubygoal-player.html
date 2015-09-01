@@ -1,0 +1,60 @@
+<!-- Imports polymer -->
+<link rel="import" href="/bower_components/polymer/polymer.html">
+
+<!-- Defines element markup -->
+<dom-module id="rubygoal-player">
+  <template>
+    <style>
+      div.container, div.button-container, div.loader-container {
+        text-align: center;
+        width: 960px;
+      }
+      a.button {
+        background-size: 100% auto;
+        width: 48px;
+        height: 48px;
+        display: inline-block;
+      }
+      #play {
+        background-image: url('/bower_components/rubygoal-webplayer/assets/images/button_grey_play.png');
+      }
+      #stop {
+        background-image: url('/bower_components/rubygoal-webplayer/assets/images/button_grey_stop.png');
+      }
+      #pause {
+        background-image: url('/bower_components/rubygoal-webplayer/assets/images/button_grey_pause.png');
+      }
+    </style>
+
+    <div class="container">
+      <div class="loader-container">
+        <img src="assets/images/loader.gif" id="loader">
+      </div>
+      <canvas id="player" height="540" width="960"></canvas>
+      <div class="button-container">
+        <a href="javascript:void(0)" id="play" class="button"></a>
+        <a href="javascript:void(0)" id="pause" class="button"><a>
+        <a href="javascript:void(0)" id="stop" class="button"><a>
+      </div>
+    </div>
+
+  </template>
+</dom-module>
+
+<script src="assets/javascript/player.js"></script>
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+
+<!-- Registers custom element -->
+<script>
+Polymer({
+  is: 'rubygoal-player',
+
+  properties: {
+    src: String
+  },
+
+  attached: function() {
+    Player.init(this.$.player, this.$.play, this.$.pause, this.$.stop, this.$.loader, this.src);
+  }
+});
+</script>
