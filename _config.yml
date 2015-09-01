@@ -7,3 +7,10 @@ assets:
   compress:
     css: 'sass'
     js: 'uglifier'
+    json: ~
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/images
+    - _assets/files
+  gzip: [ text/css, application/javascript, application/json ]
