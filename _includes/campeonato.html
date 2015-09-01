@@ -1,21 +1,37 @@
 <p>
   Para participar en el campeonato de fútbol RubyGoal hay que implementar una
-  clase que herede de <code>Coach</code> e implemente los métodos
-  <code>name</code> y <code>formation</code>.
+  clase que herede de <code>CoachDefinition</code> e implemente el bloque <code>team</code>
+  y el método <code>formation</code>.
   <br>
 
 {% highlight ruby %}
 module Rubygoal
-  class MyCoach < Coach
-    def name
-      "My team"
+  class MyCoach < CoachDefinition
+    team do
+      name "Uruguay"
+
+      players do
+        captain :godin
+
+        fast :cavani
+        fast :rolan
+        fast :suarez
+
+        average :pereira
+        average :gimenez
+        average :arevalo
+        average :lodeiro
+        average :cacerez
+        average :rodriguez
+      end
     end
 
     def formation(match)
       formation = Formation.new
-      formation.defenders   = [:average, :average, :none,    :average, :average]
-      formation.midfielders = [:average, :none,    :fast,    :none,    :average]
-      formation.attackers   = [:none,    :fast,    :captain, :fast,    :none   ]
+
+      formation.defenders :pereira, :cacerez, :gimenez, :godin, :rodriguez
+      formation.midfielders :lodeiro, :none, :rolan, :none, :arevalo
+      formation.attackers :none, :cavani, :none, :suarez, :none
 
       formation
     end
@@ -36,7 +52,7 @@ end
 
 {% highlight ruby %}
 if match.time < 10
-  formation.defenders = [:none, :none, :none, :none, :none]
+  formation.defenders :pereira, :cacerez, :gimenez, :godin, :rodriguez
 end
 {% endhighlight %}
 </p>
@@ -67,9 +83,9 @@ end
 
 {% highlight ruby %}
 if formation.me.winning? || formation.me.draw?
-  formation.defenders = [:average, :fast, :captain, :fast, :average]
+  formation.defenders :average, :fast, :captain, :fast, :average
 elsif formation.me.losing?
-  formation.attackers = [:average, :fast, :captain, :fast, :average]
+  formation.attackers :average, :fast, :captain, :fast, :average
 end
 {% endhighlight %}
 </p>
@@ -101,12 +117,4 @@ end
       <td>Retorna la cantidad de goles que ha hecho el equipo rival</td>
     </tr>
   </table>
-
-{% highlight ruby %}
-rival = formation.other.formation
-
-if rival.attackers.include?(:captain)
-  formation.defenders = [:average, :fast, :captain, :fast, :average]
-end
-{% endhighlight %}
 </p>
