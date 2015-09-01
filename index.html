@@ -1,173 +1,124 @@
 ---
+layout: default
 title: Rubygoal
 ---
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rubygoal by WyeWorks</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <!--
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    -->
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400|Source+Code+Pro' rel='stylesheet' type='text/css'>
-    {% stylesheet app %}
-    {% stylesheet syntax %}
-  </head>
-  <body data-spy="scroll" data-target=".navbar">
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <a href="/" class="navbar navbar-brand">
-            <img src="{{ 'rubygoal.png' | asset_path }}" alt="WyeWorks" />
-          </a>
-        </div>
-      </div>
-    </nav>
-    <div class="section">
+<h2>¿Qué es <a href="https://twitter.com/search?q=%23rubygoal">#rubygoal</a>?</h2>
+<div class="row">
+  <div class="col-md-12">
+    <p>
+      RubyGoal es un juego en el cual podrás ser el/la DT de un equipo de fútbol. Participarás contra otros programadores implementando en Ruby la estrategia que va a utilizar tu equipo.
+    </p>
+  </div>
+</div>
 
-      <h2>¿Qué es <a href="https://twitter.com/search?q=%23rubygoal">#rubygoal</a>?</h2>
-      <div class="row">
-        <div class="col-md-12">
-          <p>
-            RubyGoal es un juego en el cual vos sos el/la DT de un equipo de fútbol. Participarás contra otros programadores implementando en Ruby la estrategia que va a utilizar tu equipo.
-            <br>
-            Se ejecutarán partidos entre aquellos que se presenten y los que lleguen a fases avanzadas tendrán premios como ser remeras de WyeWorks, membresías de <a href="http://codeschool.com">CodeSchool</a>, medallas, y un Kindle y una copa para el vencedor.
-          </p>
-        </div>
-      </div>
-
-      <h2>¿Cómo instalarlo?</h2>
-      <div class="row">
-        <div class="col-md-12">
+<h2>¿Cómo instalarlo?</h2>
+<div class="row">
+  <div class="col-md-12">
 {% highlight bash %}
 $ gem install rubygoal
 {% endhighlight %}
-        </div>
-      </div>
+  </div>
+</div>
 
-      <h2>¿Cómo ejecutarlo?</h2>
-      <div class="row">
-        <div class="col-md-12">
-          Correr el juego con los <code>Coach</code> de ejemplo
+<h2>¿Cómo ejecutarlo?</h2>
+<div class="row">
+  <div class="col-md-12">
+    Correr el juego con los <code>Coach</code> de ejemplo
 
 {% highlight bash %}
 $ rubygoal
 {% endhighlight %}
 
-          Correr el juego con tu implementación de Coach
+    Correr el juego con tu implementación de Coach
 
 {% highlight bash %}
 $ rubygoal coach_1.rb
 {% endhighlight %}
 
-          Correr el juego con tu implementación de ambos Coach
+    Correr el juego con tu implementación de ambos Coach
 
 {% highlight bash %}
 $ rubygoal coach_1.rb coach_2.rb
 {% endhighlight %}
-        </div>
-      </div>
+  </div>
+</div>
 
-      <h2>¿Cómo participar?</h2>
-      <div class="row">
-        <div class="col-md-12">
-          Implementá tu estrategia y mandá un email a <a href="mailto:rubygoal@wyeworks.com">rubygoal@wyeworks.com</a> con
-          <ul>
-            <li>Nombre completo</li>
-            <li>Archivo Ruby con la implementación de tu estrategia.</li>
-          </ul>
-          Tenemos un cupo de 32 equipos, así que apurate! El periodo de inscripciones termina el sábado 24/5 a las 11am.
-        </div>
-      </div>
-
-      <h2>Cómo implementar la estrategia?</h2>
-      <div class="row">
-        <div class="col-md-12">
+<h2>¿Cómo implementar la estrategia?</h2>
+<div class="row">
+  <div class="col-md-12">
 {% include campeonato.html %}
-        </div>
-      </div>
+  </div>
+</div>
 
-      <h2>Ejemplos avanzados</h2>
-      <div class="row">
-        <div class="col-md-12">
-          Podés ver ejemplos avanzados <a href="https://gist.github.com/marpo60/1c7cc67a2013d9752f7c">en este gist</a>.
-        </div>
-      </div>
+<h2>Ejemplos avanzados</h2>
+<div class="row">
+  <div class="col-md-12">
+    Podés ver ejemplos avanzados <a href="https://gist.github.com/marpo60/1c7cc67a2013d9752f7c">en este gist</a>.
+  </div>
+</div>
 
-      <h2>A tener en cuenta</h2>
-      <div class="row">
-        <div class="col-md-12">
-          <p>
-            El siguiente conjunto de reglas debe ser respetado por los participantes del
-            campeonato.
+<h2>A tener en cuenta</h2>
+<div class="row">
+  <div class="col-md-12">
+    <p>
+      El siguiente conjunto de reglas debe ser respetado por los participantes del
+      campeonato.
 
-            <ol>
-              <li>
-                La implementación del método <code>name</code> debe devolver el mismo nombre SIEMPRE.
-                <br>
-                No se aceptarán participantes que hagan una implementación de este método que
-            devuelva distintos valores en cada ejecución
+      <ol>
+        <li>
+          La implementación del método <code>name</code> debe devolver el mismo nombre SIEMPRE.
+          <br>
+          No se aceptarán participantes que hagan una implementación de este método que
+      devuelva distintos valores en cada ejecución
 
-              <li>
-                La formación debe siempre contener la cantidad correcta de jugadores
-                <ul>
-                  <li>1 del tipo <code>:captain</code>
-                  <li>3 del tipo <code>:fast</code>
-                  <li>6 del tipo <code>:average</code>
-                </ul>
-                Equipos que en algún flujo de la implementación rompan esta regla, serán descalificados
-              <li>
-                La implementación de los métodos <code>lineup</code> y <code>name</code> no debe ser costoso en tiempo.
-                <br>
-                Ambos métodos van a ser invocados muchas veces por segundo y deben correr con esa
-            restricción de tiempo (en el orden de centésimas de segundo). Pruebe su implementación con alguna de las tácticas de ejemplo para ver si el juego corre fluidamente y poder anticipar problemas de performance.
-                <br>
-                Queda a criterio del comité organizador descalificar equipos que no cumplan con ese
-            requisito.
+        <li>
+          La formación debe siempre contener la cantidad correcta de jugadores
+          <ul>
+            <li>1 del tipo <code>:captain</code>
+            <li>3 del tipo <code>:fast</code>
+            <li>6 del tipo <code>:average</code>
+          </ul>
+          Equipos que en algún flujo de la implementación rompan esta regla, serán descalificados
+        <li>
+          La implementación de los métodos <code>lineup</code> y <code>name</code> no debe ser costoso en tiempo.
+          <br>
+          Ambos métodos van a ser invocados muchas veces por segundo y deben correr con esa
+      restricción de tiempo (en el orden de centésimas de segundo). Pruebe su implementación con alguna de las tácticas de ejemplo para ver si el juego corre fluidamente y poder anticipar problemas de performance.
+          <br>
+          Queda a criterio del comité organizador descalificar equipos que no cumplan con ese
+      requisito.
 
-              <li>
-              No está permitida la modificación en tiempo de ejecución de ninguna de las clases
-              del juego.
-              <br>
-              También nos reservamos el derecho de descalificar a un participante si
-            sospechamos que saca ventaja de forma injusta sobre cualquier bug que tenga el juego
-            (la actitud correcta es reportar el bug a los organizadores, no explotarlo a su favor)
-            </ol>
-          </p>
-        </div>
-      </div>
+        <li>
+        No está permitida la modificación en tiempo de ejecución de ninguna de las clases
+        del juego.
+        <br>
+        También nos reservamos el derecho de descalificar a un participante si
+      sospechamos que saca ventaja de forma injusta sobre cualquier bug que tenga el juego
+      (la actitud correcta es reportar el bug a los organizadores, no explotarlo a su favor)
+      </ol>
+    </p>
+  </div>
+</div>
 
-      <h2>Más info o dudas?</h2>
-      <div class="row">
-        <div class="col-md-12">
-        Acercate al Booth de WyeWorks y así te explicamos y te damos una mano. <br/>
-        También podés twittear al hashtag <a href="https://twitter.com/search?q=%23rubygoal">#rubygoal</a>.
-        </div>
-      </div>
-
-    </div>
-
-    <div id="footer">
-      <a class="wyeworks" href="http://www.wyeworks.com/"><span>WyeWorks</span></a>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    {% javascript app %}
-    
-    <script>
-     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-     ga('create', 'UA-51360445-1', 'rubygoal.com');
-     ga('send', 'pageview');
-
-    </script>
-  </body>
-</html>
+<h2>Campeonatos</h2>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Evento</th>
+          <th>Fecha</th>
+          <th>Ganador</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Feria ORT</td>
+          <td>02/09/2015</td>
+          <td></td>
+          <td><a href="/ort">Ver</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
