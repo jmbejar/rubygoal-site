@@ -10,8 +10,19 @@
     </thead>
     <tbody>
       {% for match in site.data.ort %}
-        {% include match/row.html home=match.home away=match.away home_score=match.home_score away_score=match.away_score %}
+        {% include match/row.html home=match.home away=match.away home_score=match.home_score away_score=match.away_score saved_game=match.saved_game %}
       {% endfor %}
     </tbody>
   </table>
+</div>
+<div class="modal fade" id="player-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg-player" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="player-container">
+          <rubygoal-player src=""></rubygoal-player>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

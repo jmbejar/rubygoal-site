@@ -2,18 +2,22 @@
   away: Bar
   home_score: 3
   away_score: 4
+  saved_game: Game_Colombia_Brasil_20150901220223.json
 
 - home: Foo
   away: Bar
   home_score: 3
   away_score: 4
+  saved_game: Game_Uruguay_Argentina_20150901215931.json
 
 - home: Foo
   away: Bar
   home_score: 3
   away_score: 4
+  saved_game: Game_Colombia_Brasil_20150901220223.json
   
 - home: Foo
   away: Bar
   home_score: 3
   away_score: 4
+  saved_game: Game_Uruguay_Argentina_20150901215931.json
