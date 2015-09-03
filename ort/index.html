@@ -34,8 +34,36 @@ title: Rubygoal
   Hacé click sobre cualquiera de los partidos para ver la grabación
   </div>
   <div class="col-md-12">
-  {% include match/table.html %}
+    <h3>Campeonato Matutino</h3>
+    <p>
+    Participaron 17 equipos, por lo que fue necesario sortear dos equipos para disputar un partido eliminatorio.
+    El ganador de este partido previo y los 15 restantes disputaron partidos eliminatorios para así llegar a un ganador.
+    </p>
   </div>
+  <div class="col-md-12">
+  {% include match/table.html datafile="ort-matutino" %}
+  </div>
+  <div class="col-md-12">
+    <h3>Campeonato Vespertino</h3>
+    <p>
+    Participaron 12 equipos que se dividieron en 4 grupos. Disputamos partidos todos contra todos en cada grupo
+    y el ganador de cada serie clasificó a semifinales.
+    Finalmente, disputamos dos semifinales y el partido final.
+    </p>
+  </div>
+  <div class="col-md-12">
+  {% include match/table.html datafile="ort-vespertino" %}
+  </div>
+  <div class="col-md-12">
+    <h3>Gran final</h3>
+    <p>
+      Final entre los ganadores de la mañana y la tarde, jugada a dos partidos por puntos.
+    </p>
+  </div>
+  <div class="col-md-12">
+  {% include match/table.html datafile="ort-finales" %}
+  </div>
+  {% include match/player_modal.html %}
 </div>
 
 <h2>Más info</h2>

@@ -1,7 +1,8 @@
-<div class='col-md-4'>
+<div class='col-md-6'>
   <table class='table table-striped'>
     <thead>
       <tr>
+        <th class='cell-phase'></th>
         <th class='cell-home'>Local</th>
         <th class='cell-score'></th>
         <th class='cell-score'></th>
@@ -9,20 +10,9 @@
       </tr>
     </thead>
     <tbody>
-      {% for match in site.data.ort %}
-        {% include match/row.html home=match.home away=match.away home_score=match.home_score away_score=match.away_score saved_game=match.saved_game %}
+      {% for match in site.data[include.datafile] %}
+        {% include match/row.html home=match.home away=match.away home_score=match.home_score away_score=match.away_score saved_game=match.saved_game phase=match.phase%}
       {% endfor %}
     </tbody>
   </table>
-</div>
-<div class="modal fade" id="player-modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-lg-player" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="player-container">
-          <rubygoal-player src=""></rubygoal-player>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>

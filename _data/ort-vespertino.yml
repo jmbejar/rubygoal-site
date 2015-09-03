@@ -1,0 +1,91 @@
+---
+- home: Nacional
+  away: Aguada
+  home_score: 5
+  away_score: 4
+  saved_game: Game_Nacional_Aguada_20150903125931.json
+  phase: Grupo A
+- home: Tanque
+  away: Aguada
+  home_score: 5
+  away_score: 3
+  saved_game: Game_Tanque_Aguada_20150903125915.json
+  phase: Grupo A
+- home: Tanque
+  away: Nacional
+  home_score: 6
+  away_score: 5
+  saved_game: Game_Tanque_Nacional_20150903125911.json
+  phase: Grupo A
+- home: Alvaro
+  away: Las Cachilas Futbol Club
+  home_score: 4
+  away_score: 4
+  saved_game: Game_Alvaro_Las_Cachilas_Futbol_Club_20150903130209.json
+  phase: Grupo B
+- home: Luis
+  away: Alvaro
+  home_score: 8
+  away_score: 5
+  saved_game: Game_Luis_Alvaro_20150903130159.json
+  phase: Grupo B
+- home: Luis
+  away: Las Cachilas Futbol Club
+  home_score: 6
+  away_score: 5
+  saved_game: Game_Luis_Las_Cachilas_Futbol_Club_20150903130207.json
+  phase: Grupo B
+- home: Byorda
+  away: Chunirov
+  home_score: 3
+  away_score: 7
+  saved_game: Game_Byorda_Chunirov_20150903160518.json
+  phase: Grupo C
+- home: Byorda
+  away: Real Peñarol
+  home_score: 4
+  away_score: 7
+  saved_game: Game_Byorda_Real_Peñarol_20150903160505.json
+  phase: Grupo C
+- home: Real Peñarol
+  away: Chunirov
+  home_score: 3
+  away_score: 4
+  saved_game: Game_Real_Peñarol_Chunirov_20150903160524.json
+  phase: Grupo C
+- home: Luli Futbol Club
+  away: Esparta
+  home_score: 10
+  away_score: 3
+  saved_game: Game_Luli_Futbol_Club_Esparta_20150903160839.json
+  phase: Grupo D
+- home: Luli Futbol Club
+  away: Olimar
+  home_score: 5
+  away_score: 3
+  saved_game: Game_Luli_Futbol_Club_Olimar_20150903160800.json
+  phase: Grupo D
+- home: Olimar
+  away: Esparta
+  home_score: 4
+  away_score: 4
+  saved_game: Game_Olimar_Esparta_20150903160846.json
+  phase: Grupo D
+- home: Chunirov
+  away: Luli Futbol Club
+  home_score: 5
+  away_score: 4
+  saved_game: Game_Chunirov_Luli_Futbol_Club_20150903161333.json
+  phase: Semifinal
+- home: Tanque
+  away: Luis
+  home_score: 8
+  away_score: 5
+  saved_game: Game_Tanque_Luis_20150903161319.json
+  phase: Semifinal
+- home: Tanque
+  away: Chunirov
+  home_score: 5
+  away_score: 3
+  saved_game: Game_Tanque_Chunirov_20150903161536.json
+  phase: Final
